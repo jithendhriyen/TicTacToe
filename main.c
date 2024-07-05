@@ -29,26 +29,16 @@ int main() {
     resetBoard();
     charSelect();
 
-    for (int i = 1; i < 10; i++) {
-      if ((i % 2 != 0) && (PLAYER == 'X')) {
-        playerInput();
+    for (int i = 1; i <= 9; i++) {
+    	if (((i % 2 != 0) && (PLAYER == 'X')) || ((i % 2 == 0) && (PLAYER == 'O'))) {
+        	playerInput();
+        } else {
+                printf("Computer's Turn:\n");
+                computerInput();
+        }
         printBoard();
         checkWinner();
-      } else if ((i % 2 != 0) && (COMPUTER == 'X')) {
-        printf("Computer's Turn:\n");
-        computerInput();
-        printBoard();
-        checkWinner();
-      } else if ((i % 2 == 0) && (PLAYER == 'O')) {
-        playerInput();
-        printBoard();
-        checkWinner();
-      } else if ((i % 2 == 0) && (COMPUTER == 'O')) {
-        printf("Computer's Turn:\n");
-        computerInput();
-        printBoard();
-        checkWinner();
-      }
+        
     }
 
     printf("Do you want to play again (y/n): ");
