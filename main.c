@@ -15,12 +15,12 @@ struct coord {
 }
 coord;
 
-void charSelect();
-void resetBoard();
-void printBoard();
-void playerInput();
-void computerInput();
-void checkWinner();
+void charSelect();//function declaration
+void resetBoard();//function declaration
+void printBoard();//function declaration
+void playerInput();//function declaration
+void computerInput();//function declaration
+void checkWinner();//function declaration
 
 int main() {
   char choice;
